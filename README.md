@@ -18,3 +18,6 @@
 
 # 接下来的打算？
 大概还会加入定时提醒commit代码的功能吧…毕竟人老了，健忘…
+
+# 下载地址
+可以在[release](https://github.com/zjhch123/GithubStatus2/releases)里直接下载
