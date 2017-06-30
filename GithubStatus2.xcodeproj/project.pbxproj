@@ -96,10 +96,44 @@
 		3012C78D1F061D4300E98D63 /* StatusView */ = {
 			isa = PBXGroup;
 			children = (
+				306C65601F04FD0F0017DE33 /* MainMenu.xib */,
 				306C65691F05222C0017DE33 /* StatusView.swift */,
 				3012C78B1F061C4400E98D63 /* ExStatusView.swift */,
 			);
 			name = StatusView;
+			sourceTree = "<group>";
+		};
+		3012C7921F06327D00E98D63 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				306C65631F0520CA0017DE33 /* GithubRequest.swift */,
+			);
+			name = Request;
+			sourceTree = "<group>";
+		};
+		3012C7931F06328700E98D63 /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				306C656B1F0526460017DE33 /* PreferencesWindow.swift */,
+				306C656C1F0526460017DE33 /* PreferencesWindow.xib */,
+			);
+			name = Preferences;
+			sourceTree = "<group>";
+		};
+		3012C7941F06329800E98D63 /* NotificationController */ = {
+			isa = PBXGroup;
+			children = (
+				3012C7901F06243800E98D63 /* UserNotification.swift */,
+			);
+			name = NotificationController;
+			sourceTree = "<group>";
+		};
+		3012C7951F0632A800E98D63 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				3012C7871F05FCBF00E98D63 /* Util.swift */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 		306C65471F04FCD30017DE33 = {
@@ -125,17 +159,15 @@
 		306C65521F04FCD30017DE33 /* GithubStatus2 */ = {
 			isa = PBXGroup;
 			children = (
+				3012C7951F0632A800E98D63 /* Util */,
+				3012C7941F06329800E98D63 /* NotificationController */,
+				3012C7931F06328700E98D63 /* Preferences */,
+				3012C7921F06327D00E98D63 /* Request */,
 				3012C78D1F061D4300E98D63 /* StatusView */,
 				3012C7841F05F2B700E98D63 /* GithubStatus2.entitlements */,
 				306C65531F04FCD30017DE33 /* AppDelegate.swift */,
 				306C65551F04FCD30017DE33 /* Assets.xcassets */,
-				306C65601F04FD0F0017DE33 /* MainMenu.xib */,
 				306C655A1F04FCD30017DE33 /* Info.plist */,
-				306C65631F0520CA0017DE33 /* GithubRequest.swift */,
-				306C656B1F0526460017DE33 /* PreferencesWindow.swift */,
-				306C656C1F0526460017DE33 /* PreferencesWindow.xib */,
-				3012C7871F05FCBF00E98D63 /* Util.swift */,
-				3012C7901F06243800E98D63 /* UserNotification.swift */,
 			);
 			path = GithubStatus2;
 			sourceTree = "<group>";
