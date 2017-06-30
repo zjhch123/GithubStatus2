@@ -83,7 +83,7 @@
                             <constraints>
                                 <constraint firstAttribute="width" constant="122" id="9VM-2d-qQy"/>
                             </constraints>
-                            <buttonCell key="cell" type="push" title="切换账号" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="LgW-5P-GJY">
+                            <buttonCell key="cell" type="push" title="程序设置" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="LgW-5P-GJY">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                 <font key="font" size="13" name=".PingFangSC-Regular"/>
                             </buttonCell>

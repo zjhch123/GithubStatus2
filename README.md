@@ -21,3 +21,6 @@
 
 # 下载地址
 可以在[release](https://github.com/zjhch123/GithubStatus2/releases)里直接下载
+
+# Update:
+2017年06月30日: 更新开机自动启动的设置

@@ -7,9 +7,12 @@
 //
 
 import Cocoa
+import ServiceManagement
+
 
 class StatusView: NSView, GithubRequestDelegate, PreferencesWindowDelegate  {
 
+    
     @IBOutlet weak var popView: NSPopover!
 
     @IBOutlet weak var usernameTextField: NSTextField!
@@ -17,7 +20,9 @@ class StatusView: NSView, GithubRequestDelegate, PreferencesWindowDelegate  {
     @IBOutlet weak var logoImageView: NSImageView!
     
     let statusItem = NSStatusBar.system().statusItem(withLength: -1)
-    let DEFAULT_USER = "octocat"
+    
+
+    
     var githubRequest: GithubRequest!
     var preferencesWindow: PreferencesWindow!
     
@@ -30,8 +35,13 @@ class StatusView: NSView, GithubRequestDelegate, PreferencesWindowDelegate  {
         statusItem.image = icon
         statusItem.target = self
         statusItem.action = #selector(StatusView.iconClicked)
-        usernameTextField.stringValue = "用户：\(getDefaultUser())"
+        refreshUser()
         updateCount()
+        startupAppWhenLogin(startup: Util.getDefaultStartup())
+    }
+    
+    func refreshUser() {
+        usernameTextField.stringValue = "用户：\(Util.getDefaultUser())"
     }
     
     func iconClicked() {
@@ -39,14 +49,8 @@ class StatusView: NSView, GithubRequestDelegate, PreferencesWindowDelegate  {
         popView.show(relativeTo: self.statusItem.button!.bounds, of: self.statusItem.button!, preferredEdge: NSRectEdge.minY)
     }
     
-    func getDefaultUser() -> String {
-        let defaults = UserDefaults.standard
-        let user = defaults.string(forKey: "username") ?? DEFAULT_USER
-        return user
-    }
-    
     func updateCount() {
-        let user = getDefaultUser()
+        let user = Util.getDefaultUser()
         DispatchQueue.main.async {
             self.countTextField.stringValue = "正在获取提交次数"
         }
@@ -55,7 +59,7 @@ class StatusView: NSView, GithubRequestDelegate, PreferencesWindowDelegate  {
     
     func githubRequestDidUpdate(username: String, count: String?) {
         DispatchQueue.main.async {
-            self.usernameTextField.stringValue = "用户：\(username)"
+            self.refreshUser()
             if let _count = count {
                 self.countTextField.stringValue = "今日已提交：\(_count)次。"
             } else {
@@ -65,8 +69,22 @@ class StatusView: NSView, GithubRequestDelegate, PreferencesWindowDelegate  {
     }
     
     func preferencesDisUpdate() {
-        usernameTextField.stringValue = "用户：\(getDefaultUser())"
-        updateCount()
+        refreshUser()
+        startupAppWhenLogin(startup: Util.getDefaultStartup())
+    }
+    
+    func startupAppWhenLogin(startup: Bool) {
+        let launcherAppIdentifier = "com.zjh.MainAppHelper"
+        SMLoginItemSetEnabled(launcherAppIdentifier as CFString, startup)
+        var startedAtLogin = false
+        for app in NSWorkspace.shared().runningApplications {
+            if app.bundleIdentifier == launcherAppIdentifier {
+                startedAtLogin = true
+            }
+        }
+        if startedAtLogin {
+            DistributedNotificationCenter.default.post(name: NSNotification.Name(rawValue: "killhelper"), object: Bundle.main.bundleIdentifier!)
+        }
     }
     
     @IBAction func preferencesClicked(_ sender: AnyObject) {

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3012C7781F05F1EF00E98D63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3012C7771F05F1EF00E98D63 /* AppDelegate.swift */; };
+		3012C77A1F05F1EF00E98D63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3012C7791F05F1EF00E98D63 /* Assets.xcassets */; };
+		3012C77D1F05F1EF00E98D63 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3012C77B1F05F1EF00E98D63 /* MainMenu.xib */; };
+		3012C7831F05F29400E98D63 /* MainAppHelper.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3012C7751F05F1EF00E98D63 /* MainAppHelper.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3012C7881F05FCBF00E98D63 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3012C7871F05FCBF00E98D63 /* Util.swift */; };
 		306C65541F04FCD30017DE33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306C65531F04FCD30017DE33 /* AppDelegate.swift */; };
 		306C65561F04FCD30017DE33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 306C65551F04FCD30017DE33 /* Assets.xcassets */; };
 		306C65621F04FD0F0017DE33 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 306C65601F04FD0F0017DE33 /* MainMenu.xib */; };
@@ -17,7 +22,28 @@
 		458028D408AA0495B8F3E68A /* Pods_GithubStatus2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A66404B332DBCBC31000C40 /* Pods_GithubStatus2.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		3012C7821F05F27700E98D63 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+				3012C7831F05F29400E98D63 /* MainAppHelper.app in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		3012C7751F05F1EF00E98D63 /* MainAppHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MainAppHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3012C7771F05F1EF00E98D63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3012C7791F05F1EF00E98D63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3012C77C1F05F1EF00E98D63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		3012C77E1F05F1EF00E98D63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3012C7841F05F2B700E98D63 /* GithubStatus2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GithubStatus2.entitlements; sourceTree = "<group>"; };
+		3012C7851F05F2BE00E98D63 /* MainAppHelper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MainAppHelper.entitlements; sourceTree = "<group>"; };
+		3012C7871F05FCBF00E98D63 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		306C65501F04FCD30017DE33 /* GithubStatus2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubStatus2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		306C65531F04FCD30017DE33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		306C65551F04FCD30017DE33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -33,6 +59,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3012C7721F05F1EF00E98D63 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		306C654D1F04FCD30017DE33 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -44,10 +77,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3012C7761F05F1EF00E98D63 /* MainAppHelper */ = {
+			isa = PBXGroup;
+			children = (
+				3012C7851F05F2BE00E98D63 /* MainAppHelper.entitlements */,
+				3012C7771F05F1EF00E98D63 /* AppDelegate.swift */,
+				3012C7791F05F1EF00E98D63 /* Assets.xcassets */,
+				3012C77B1F05F1EF00E98D63 /* MainMenu.xib */,
+				3012C77E1F05F1EF00E98D63 /* Info.plist */,
+			);
+			path = MainAppHelper;
+			sourceTree = "<group>";
+		};
 		306C65471F04FCD30017DE33 = {
 			isa = PBXGroup;
 			children = (
 				306C65521F04FCD30017DE33 /* GithubStatus2 */,
+				3012C7761F05F1EF00E98D63 /* MainAppHelper */,
 				306C65511F04FCD30017DE33 /* Products */,
 				FFC25886E8207D7B4D30865B /* Pods */,
 				313672010D8467BDDFFA18AA /* Frameworks */,
@@ -58,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				306C65501F04FCD30017DE33 /* GithubStatus2.app */,
+				3012C7751F05F1EF00E98D63 /* MainAppHelper.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -65,6 +112,7 @@
 		306C65521F04FCD30017DE33 /* GithubStatus2 */ = {
 			isa = PBXGroup;
 			children = (
+				3012C7841F05F2B700E98D63 /* GithubStatus2.entitlements */,
 				306C65531F04FCD30017DE33 /* AppDelegate.swift */,
 				306C65551F04FCD30017DE33 /* Assets.xcassets */,
 				306C65601F04FD0F0017DE33 /* MainMenu.xib */,
@@ -73,6 +121,7 @@
 				306C65691F05222C0017DE33 /* StatusView.swift */,
 				306C656B1F0526460017DE33 /* PreferencesWindow.swift */,
 				306C656C1F0526460017DE33 /* PreferencesWindow.xib */,
+				3012C7871F05FCBF00E98D63 /* Util.swift */,
 			);
 			path = GithubStatus2;
 			sourceTree = "<group>";
@@ -97,6 +146,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		3012C7741F05F1EF00E98D63 /* MainAppHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3012C7811F05F1EF00E98D63 /* Build configuration list for PBXNativeTarget "MainAppHelper" */;
+			buildPhases = (
+				3012C7711F05F1EF00E98D63 /* Sources */,
+				3012C7721F05F1EF00E98D63 /* Frameworks */,
+				3012C7731F05F1EF00E98D63 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MainAppHelper;
+			productName = MainAppHelper;
+			productReference = 3012C7751F05F1EF00E98D63 /* MainAppHelper.app */;
+			productType = "com.apple.product-type.application";
+		};
 		306C654F1F04FCD30017DE33 /* GithubStatus2 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 306C655D1F04FCD30017DE33 /* Build configuration list for PBXNativeTarget "GithubStatus2" */;
@@ -107,6 +173,7 @@
 				306C654E1F04FCD30017DE33 /* Resources */,
 				CB2FAECA915AAC1EC6EC821B /* [CP] Embed Pods Frameworks */,
 				D1CB033654486581DC672ED8 /* [CP] Copy Pods Resources */,
+				3012C7821F05F27700E98D63 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -127,10 +194,25 @@
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "张佳皓";
 				TargetAttributes = {
+					3012C7741F05F1EF00E98D63 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = RE4CMN34PG;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
 					306C654F1F04FCD30017DE33 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = RE4CMN34PG;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -148,11 +230,21 @@
 			projectRoot = "";
 			targets = (
 				306C654F1F04FCD30017DE33 /* GithubStatus2 */,
+				3012C7741F05F1EF00E98D63 /* MainAppHelper */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3012C7731F05F1EF00E98D63 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3012C77A1F05F1EF00E98D63 /* Assets.xcassets in Resources */,
+				3012C77D1F05F1EF00E98D63 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		306C654E1F04FCD30017DE33 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -214,12 +306,21 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3012C7711F05F1EF00E98D63 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3012C7781F05F1EF00E98D63 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		306C654C1F04FCD30017DE33 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				306C656D1F0526460017DE33 /* PreferencesWindow.swift in Sources */,
 				306C65641F0520CA0017DE33 /* GithubRequest.swift in Sources */,
+				3012C7881F05FCBF00E98D63 /* Util.swift in Sources */,
 				306C65541F04FCD30017DE33 /* AppDelegate.swift in Sources */,
 				306C656A1F05222C0017DE33 /* StatusView.swift in Sources */,
 			);
@@ -228,6 +329,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		3012C77B1F05F1EF00E98D63 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3012C77C1F05F1EF00E98D63 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
 		306C65601F04FD0F0017DE33 /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -239,6 +348,38 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		3012C77F1F05F1EF00E98D63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MainAppHelper/MainAppHelper.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = RE4CMN34PG;
+				INFOPLIST_FILE = MainAppHelper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zjh.MainAppHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		3012C7801F05F1EF00E98D63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MainAppHelper/MainAppHelper.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = RE4CMN34PG;
+				INFOPLIST_FILE = MainAppHelper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zjh.MainAppHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		306C655B1F04FCD30017DE33 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -334,6 +475,8 @@
 			baseConfigurationReference = 6E9D60004AC0093FE4EC9585 /* Pods-GithubStatus2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = GithubStatus2/GithubStatus2.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = RE4CMN34PG;
 				INFOPLIST_FILE = GithubStatus2/Info.plist;
@@ -349,6 +492,8 @@
 			baseConfigurationReference = C2D04D0D25264F0882D88666 /* Pods-GithubStatus2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = GithubStatus2/GithubStatus2.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = RE4CMN34PG;
 				INFOPLIST_FILE = GithubStatus2/Info.plist;
@@ -362,6 +507,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3012C7811F05F1EF00E98D63 /* Build configuration list for PBXNativeTarget "MainAppHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3012C77F1F05F1EF00E98D63 /* Debug */,
+				3012C7801F05F1EF00E98D63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		306C654B1F04FCD30017DE33 /* Build configuration list for PBXProject "GithubStatus2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

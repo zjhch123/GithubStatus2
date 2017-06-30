@@ -8,6 +8,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="PreferencesWindow" customModule="GithubStatus2" customModuleProvider="target">
             <connections>
+                <outlet property="startupBtn" destination="gAA-2q-ghM" id="Hsy-gN-XQ8"/>
                 <outlet property="usernameTextField" destination="Wgg-xd-tFr" id="npS-Ez-rbb"/>
                 <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
             </connections>
@@ -16,14 +17,14 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <window title="设置用户" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" animationBehavior="default" id="F0z-JX-Cv5">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
-            <rect key="contentRect" x="616" y="398" width="289" height="81"/>
+            <rect key="contentRect" x="616" y="398" width="289" height="111"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
             <view key="contentView" wantsLayer="YES" id="se5-gp-TjO">
-                <rect key="frame" x="0.0" y="0.0" width="289" height="81"/>
-                <autoresizingMask key="autoresizingMask"/>
+                <rect key="frame" x="0.0" y="0.0" width="289" height="111"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
                     <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YLp-dj-eDR">
-                        <rect key="frame" x="22" y="39" width="247" height="22"/>
+                        <rect key="frame" x="22" y="69" width="247" height="22"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2Ib-94-Aou">
                                 <rect key="frame" x="-2" y="3" width="44" height="17"/>
@@ -35,7 +36,7 @@
                             </textField>
                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Wgg-xd-tFr">
                                 <rect key="frame" x="48" y="0.0" width="199" height="22"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="l7W-ku-eNK">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="请输入用户名" drawsBackground="YES" usesSingleLineMode="YES" id="l7W-ku-eNK">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -57,7 +58,7 @@
                         </customSpacing>
                     </stackView>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="odt-bs-JqL">
-                        <rect key="frame" x="111" y="4" width="67" height="32"/>
+                        <rect key="frame" x="111" y="5" width="67" height="32"/>
                         <buttonCell key="cell" type="push" title="确认" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Whr-hf-RRV">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" size="13" name=".PingFangSC-Regular"/>
@@ -66,19 +67,28 @@
                             <action selector="submitClicked:" target="-2" id="Lp9-Nu-NMq"/>
                         </connections>
                     </button>
+                    <button translatesAutoresizingMaskIntoConstraints="NO" id="gAA-2q-ghM">
+                        <rect key="frame" x="20" y="45" width="102" height="18"/>
+                        <buttonCell key="cell" type="check" title="开机自动启动" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="hAK-jV-eJv">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" size="13" name=".PingFangSC-Regular"/>
+                        </buttonCell>
+                    </button>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="gAA-2q-ghM" firstAttribute="leading" secondItem="YLp-dj-eDR" secondAttribute="leading" id="9QD-RR-nuP"/>
                     <constraint firstAttribute="trailing" secondItem="YLp-dj-eDR" secondAttribute="trailing" constant="20" id="9yd-9Z-wV1"/>
+                    <constraint firstAttribute="bottom" secondItem="odt-bs-JqL" secondAttribute="bottom" constant="12" id="ZOS-tY-Y6a"/>
+                    <constraint firstItem="gAA-2q-ghM" firstAttribute="top" secondItem="YLp-dj-eDR" secondAttribute="bottom" constant="8" id="deQ-bB-QfG"/>
                     <constraint firstItem="YLp-dj-eDR" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" constant="20" id="ftG-b4-xsc"/>
                     <constraint firstItem="YLp-dj-eDR" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="22" id="lop-9L-HGv"/>
                     <constraint firstItem="odt-bs-JqL" firstAttribute="centerX" secondItem="se5-gp-TjO" secondAttribute="centerX" id="t87-LN-gAY"/>
-                    <constraint firstItem="odt-bs-JqL" firstAttribute="top" secondItem="YLp-dj-eDR" secondAttribute="bottom" constant="7" id="u7b-W2-Pld"/>
                 </constraints>
             </view>
             <connections>
                 <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
             </connections>
-            <point key="canvasLocation" x="35.5" y="51.5"/>
+            <point key="canvasLocation" x="35.5" y="66.5"/>
         </window>
     </objects>
 </document>

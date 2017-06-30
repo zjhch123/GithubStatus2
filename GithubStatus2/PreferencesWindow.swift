@@ -12,10 +12,11 @@ protocol PreferencesWindowDelegate {
     func preferencesDisUpdate()
 }
 
-
 class PreferencesWindow: NSWindowController, NSWindowDelegate {
 
+    @IBOutlet weak var startupBtn: NSButton!
     @IBOutlet weak var usernameTextField: NSTextField!
+    
     var delegate: PreferencesWindowDelegate?
     
     override var windowNibName: String! {
@@ -27,11 +28,24 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
         self.window?.center()
         self.window?.makeKeyAndOrderFront(nil)
         NSApp.activate(ignoringOtherApps: true)
+        let defaults = UserDefaults.standard
+        
+        var user: String!
+        if let _user = defaults.string(forKey: "username") {
+            user = _user
+        } else {
+            user = "octocat"
+        }
+
+        let startup: Bool = defaults.bool(forKey: "startup")
+        
+        usernameTextField.stringValue = user
+        startupBtn.state = startup ? 1 : 0
     }
     
     @IBAction func submitClicked(_ sender: AnyObject) {
-        let defaults = UserDefaults.standard
-        defaults.setValue(usernameTextField.stringValue, forKey: "username")
+        Util.setDefaultUser(username: usernameTextField.stringValue)
+        Util.setDefaultStartup(startup: startupBtn.state)
         delegate?.preferencesDisUpdate()
         self.close()
     }
