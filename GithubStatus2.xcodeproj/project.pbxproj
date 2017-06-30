@@ -12,6 +12,8 @@
 		3012C77D1F05F1EF00E98D63 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3012C77B1F05F1EF00E98D63 /* MainMenu.xib */; };
 		3012C7831F05F29400E98D63 /* MainAppHelper.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3012C7751F05F1EF00E98D63 /* MainAppHelper.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3012C7881F05FCBF00E98D63 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3012C7871F05FCBF00E98D63 /* Util.swift */; };
+		3012C78C1F061C4400E98D63 /* ExStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3012C78B1F061C4400E98D63 /* ExStatusView.swift */; };
+		3012C7911F06243800E98D63 /* UserNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3012C7901F06243800E98D63 /* UserNotification.swift */; };
 		306C65541F04FCD30017DE33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306C65531F04FCD30017DE33 /* AppDelegate.swift */; };
 		306C65561F04FCD30017DE33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 306C65551F04FCD30017DE33 /* Assets.xcassets */; };
 		306C65621F04FD0F0017DE33 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 306C65601F04FD0F0017DE33 /* MainMenu.xib */; };
@@ -44,6 +46,8 @@
 		3012C7841F05F2B700E98D63 /* GithubStatus2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GithubStatus2.entitlements; sourceTree = "<group>"; };
 		3012C7851F05F2BE00E98D63 /* MainAppHelper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MainAppHelper.entitlements; sourceTree = "<group>"; };
 		3012C7871F05FCBF00E98D63 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		3012C78B1F061C4400E98D63 /* ExStatusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExStatusView.swift; sourceTree = "<group>"; };
+		3012C7901F06243800E98D63 /* UserNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserNotification.swift; sourceTree = "<group>"; };
 		306C65501F04FCD30017DE33 /* GithubStatus2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubStatus2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		306C65531F04FCD30017DE33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		306C65551F04FCD30017DE33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -89,6 +93,15 @@
 			path = MainAppHelper;
 			sourceTree = "<group>";
 		};
+		3012C78D1F061D4300E98D63 /* StatusView */ = {
+			isa = PBXGroup;
+			children = (
+				306C65691F05222C0017DE33 /* StatusView.swift */,
+				3012C78B1F061C4400E98D63 /* ExStatusView.swift */,
+			);
+			name = StatusView;
+			sourceTree = "<group>";
+		};
 		306C65471F04FCD30017DE33 = {
 			isa = PBXGroup;
 			children = (
@@ -112,16 +125,17 @@
 		306C65521F04FCD30017DE33 /* GithubStatus2 */ = {
 			isa = PBXGroup;
 			children = (
+				3012C78D1F061D4300E98D63 /* StatusView */,
 				3012C7841F05F2B700E98D63 /* GithubStatus2.entitlements */,
 				306C65531F04FCD30017DE33 /* AppDelegate.swift */,
 				306C65551F04FCD30017DE33 /* Assets.xcassets */,
 				306C65601F04FD0F0017DE33 /* MainMenu.xib */,
 				306C655A1F04FCD30017DE33 /* Info.plist */,
 				306C65631F0520CA0017DE33 /* GithubRequest.swift */,
-				306C65691F05222C0017DE33 /* StatusView.swift */,
 				306C656B1F0526460017DE33 /* PreferencesWindow.swift */,
 				306C656C1F0526460017DE33 /* PreferencesWindow.xib */,
 				3012C7871F05FCBF00E98D63 /* Util.swift */,
+				3012C7901F06243800E98D63 /* UserNotification.swift */,
 			);
 			path = GithubStatus2;
 			sourceTree = "<group>";
@@ -319,10 +333,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				306C656D1F0526460017DE33 /* PreferencesWindow.swift in Sources */,
+				3012C7911F06243800E98D63 /* UserNotification.swift in Sources */,
 				306C65641F0520CA0017DE33 /* GithubRequest.swift in Sources */,
 				3012C7881F05FCBF00E98D63 /* Util.swift in Sources */,
 				306C65541F04FCD30017DE33 /* AppDelegate.swift in Sources */,
 				306C656A1F05222C0017DE33 /* StatusView.swift in Sources */,
+				3012C78C1F061C4400E98D63 /* ExStatusView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -34,4 +34,24 @@ struct Util {
         return startup
     }
     
+    static func formatDate() -> String {
+        let currentDate = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let stringDate = dateFormatter.string(from: currentDate)
+        return stringDate
+    }
+    
+    static func todayIsNotifaction() -> Bool {
+        let date = Util.formatDate()
+        let defaults = UserDefaults.standard
+        return defaults.bool(forKey: date)
+    }
+    
+    static func setTodayNotifaction(flag: Bool) {
+        let date = Util.formatDate()
+        let defaults = UserDefaults.standard
+        defaults.set(flag, forKey: date)
+    }
+    
 }

@@ -20,7 +20,7 @@
                 <outlet property="view" destination="wvA-8C-CXD" id="Zzn-ve-FbW"/>
             </connections>
         </viewController>
-        <popover id="sXb-BC-fEi">
+        <popover behavior="t" id="sXb-BC-fEi">
             <connections>
                 <outlet property="contentViewController" destination="7hq-gC-2nE" id="WMj-jo-QuU"/>
             </connections>

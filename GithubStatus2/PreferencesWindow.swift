@@ -44,6 +44,11 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
     }
     
     @IBAction func submitClicked(_ sender: AnyObject) {
+        if(usernameTextField.stringValue != Util.getDefaultUser()) {
+            // 如果更新了账号，则刷新今日提醒
+            Util.setTodayNotifaction(flag: false)
+        }
+        
         Util.setDefaultUser(username: usernameTextField.stringValue)
         Util.setDefaultStartup(startup: startupBtn.state)
         delegate?.preferencesDisUpdate()

@@ -22,7 +22,7 @@ class GithubRequest {
         self.delegate = delegate
     }
     
-    func getCountFrom(html: String, username: String) {
+    func getCountFrom(html: String) -> String? {
         let currentDate = Date()
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale.current
@@ -31,7 +31,12 @@ class GithubRequest {
         let pattern = "data-count=\"(\\d{1,})\" data-date=\"\(stringDate)\""
         let digit = pattern.r?.findFirst(in: html)?.group(at: 1)
         print(digit)
-        self.delegate?.githubRequestDidUpdate(username: username, count: digit);
+        return digit
+    }
+    
+    func getCountFrom(html: String, username: String) {
+        let digit = getCountFrom(html: html)
+        self.delegate?.githubRequestDidUpdate(username: username, count: digit)
     }
     
     func request(username: String) {
