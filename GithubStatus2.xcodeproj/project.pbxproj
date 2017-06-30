@@ -14,6 +14,7 @@
 		3012C7881F05FCBF00E98D63 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3012C7871F05FCBF00E98D63 /* Util.swift */; };
 		3012C78C1F061C4400E98D63 /* ExStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3012C78B1F061C4400E98D63 /* ExStatusView.swift */; };
 		3012C7911F06243800E98D63 /* UserNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3012C7901F06243800E98D63 /* UserNotification.swift */; };
+		3012C7971F063A7C00E98D63 /* ExNSColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3012C7961F063A7C00E98D63 /* ExNSColor.swift */; };
 		306C65541F04FCD30017DE33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306C65531F04FCD30017DE33 /* AppDelegate.swift */; };
 		306C65561F04FCD30017DE33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 306C65551F04FCD30017DE33 /* Assets.xcassets */; };
 		306C65621F04FD0F0017DE33 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 306C65601F04FD0F0017DE33 /* MainMenu.xib */; };
@@ -48,6 +49,7 @@
 		3012C7871F05FCBF00E98D63 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		3012C78B1F061C4400E98D63 /* ExStatusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExStatusView.swift; sourceTree = "<group>"; };
 		3012C7901F06243800E98D63 /* UserNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserNotification.swift; sourceTree = "<group>"; };
+		3012C7961F063A7C00E98D63 /* ExNSColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExNSColor.swift; sourceTree = "<group>"; };
 		306C65501F04FCD30017DE33 /* GithubStatus2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubStatus2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		306C65531F04FCD30017DE33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		306C65551F04FCD30017DE33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				306C65601F04FD0F0017DE33 /* MainMenu.xib */,
 				306C65691F05222C0017DE33 /* StatusView.swift */,
 				3012C78B1F061C4400E98D63 /* ExStatusView.swift */,
+				3012C7961F063A7C00E98D63 /* ExNSColor.swift */,
 			);
 			name = StatusView;
 			sourceTree = "<group>";
@@ -371,6 +374,7 @@
 				306C65541F04FCD30017DE33 /* AppDelegate.swift in Sources */,
 				306C656A1F05222C0017DE33 /* StatusView.swift in Sources */,
 				3012C78C1F061C4400E98D63 /* ExStatusView.swift in Sources */,
+				3012C7971F063A7C00E98D63 /* ExNSColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -42,11 +42,12 @@ extension StatusView: GithubRequestDelegate, PreferencesWindowDelegate {
         githubRequest.request(username: user)
     }
     
-    func githubRequestDidUpdate(username: String, count: String?) {
+    func githubRequestDidUpdate(username: String, count: String?, color: String?) {
         DispatchQueue.main.async {
             self.refreshUser()
             if let _count = count {
                 self.countTextField.stringValue = "今日已提交：\(_count)次。"
+                self.statusColor.backgroundColor = NSColor.ColorHex(hex: color!)
             } else {
                 self.countTextField.stringValue = "获取失败，请刷新重试~"
             }

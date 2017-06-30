@@ -11,7 +11,7 @@ import SwiftHTTP
 import Regex
 
 protocol GithubRequestDelegate {
-    func githubRequestDidUpdate(username: String, count: String?)
+    func githubRequestDidUpdate(username: String, count: String?, color: String?)
 }
 
 class GithubRequest {
@@ -22,21 +22,23 @@ class GithubRequest {
         self.delegate = delegate
     }
     
-    func getCountFrom(html: String) -> String? {
+    func getCountFrom(html: String) -> (String?, String?) {
         let currentDate = Date()
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale.current
         dateFormatter.dateFormat = "YYYY-MM-dd"
         let stringDate = dateFormatter.string(from: currentDate)
-        let pattern = "data-count=\"(\\d{1,})\" data-date=\"\(stringDate)\""
-        let digit = pattern.r?.findFirst(in: html)?.group(at: 1)
+        let pattern = "fill=\"(#\\w{6})\" data-count=\"(\\d{1,})\" data-date=\"\(stringDate)\""
+        let color = pattern.r?.findFirst(in: html)?.group(at: 1)
+        let digit = pattern.r?.findFirst(in: html)?.group(at: 2)
         print(digit)
-        return digit
+        print(color)
+        return (digit, color)
     }
     
     func getCountFrom(html: String, username: String) {
-        let digit = getCountFrom(html: html)
-        self.delegate?.githubRequestDidUpdate(username: username, count: digit)
+        let (digit, color) = getCountFrom(html: html)
+        self.delegate?.githubRequestDidUpdate(username: username, count: digit, color: color)
     }
     
     func request(username: String) {

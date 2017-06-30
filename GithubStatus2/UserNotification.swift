@@ -26,7 +26,7 @@ class UserNotification: NSObject, NSUserNotificationCenterDelegate, GithubReques
         githubRequest.request(username: Util.getDefaultUser())
     }
     
-    func githubRequestDidUpdate(username: String, count: String?) {
+    func githubRequestDidUpdate(username: String, count: String?, color: String?) {
         if let _count = count {
             if let __count = Int(_count) {
                 if __count > 0 {

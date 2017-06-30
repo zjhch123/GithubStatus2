@@ -137,11 +137,25 @@
                         <real value="3.4028234663852886e+38"/>
                     </customSpacing>
                 </stackView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Efv-wC-Ccd">
+                    <rect key="frame" x="77" y="36" width="15" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="15" id="FpN-jV-RPO"/>
+                        <constraint firstAttribute="width" constant="15" id="VlO-B1-la8"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" drawsBackground="YES" id="YWD-oh-mRo">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
             </subviews>
             <constraints>
                 <constraint firstItem="bIm-O5-Wgf" firstAttribute="leading" secondItem="kgq-YW-P80" secondAttribute="leading" id="3em-pB-cBH"/>
+                <constraint firstItem="Efv-wC-Ccd" firstAttribute="leading" secondItem="bIm-O5-Wgf" secondAttribute="trailing" constant="8" id="E93-C4-nuZ"/>
                 <constraint firstItem="kgq-YW-P80" firstAttribute="centerX" secondItem="wvA-8C-CXD" secondAttribute="centerX" id="Sx8-cZ-fcg"/>
                 <constraint firstItem="Pvq-FJ-0ZF" firstAttribute="trailing" secondItem="kgq-YW-P80" secondAttribute="trailing" id="cx6-78-ltQ"/>
+                <constraint firstAttribute="bottom" secondItem="Efv-wC-Ccd" secondAttribute="bottom" constant="36" id="fvX-9c-XT3"/>
                 <constraint firstItem="kgq-YW-P80" firstAttribute="top" secondItem="wvA-8C-CXD" secondAttribute="top" constant="20" id="gFf-j8-WVZ"/>
                 <constraint firstAttribute="bottom" secondItem="bIm-O5-Wgf" secondAttribute="bottom" constant="20" id="nvr-rF-t9i"/>
                 <constraint firstAttribute="bottom" secondItem="Pvq-FJ-0ZF" secondAttribute="bottom" constant="18" id="uAO-WK-cqv"/>
@@ -150,6 +164,7 @@
                 <outlet property="countTextField" destination="sxV-fi-ByN" id="ucy-o1-1h3"/>
                 <outlet property="logoImageView" destination="bIm-O5-Wgf" id="cpE-pv-eCf"/>
                 <outlet property="popView" destination="sXb-BC-fEi" id="Fds-mF-021"/>
+                <outlet property="statusColor" destination="Efv-wC-Ccd" id="SVp-ho-V66"/>
                 <outlet property="usernameTextField" destination="7cR-4F-085" id="LGk-VL-S1B"/>
             </connections>
             <point key="canvasLocation" x="172" y="192"/>
