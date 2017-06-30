@@ -45,13 +45,13 @@ struct Util {
     static func todayIsNotifaction() -> Bool {
         let date = Util.formatDate()
         let defaults = UserDefaults.standard
-        return defaults.bool(forKey: date)
+        return defaults.bool(forKey: date + Util.getDefaultUser())
     }
     
     static func setTodayNotifaction(flag: Bool) {
         let date = Util.formatDate()
         let defaults = UserDefaults.standard
-        defaults.set(flag, forKey: date)
+        defaults.set(flag, forKey: date + Util.getDefaultUser())
     }
     
 }

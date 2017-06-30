@@ -41,7 +41,7 @@ class StatusView: NSView {
         let currentdate = Date()
         let calendar = Calendar.current
         let dateComponents = calendar.dateComponents([.year,.month, .day, .hour,.minute,.second], from: currentdate )
-        if dateComponents.hour! >= 15 && !Util.todayIsNotifaction() {
+        if dateComponents.hour! >= 20 && !Util.todayIsNotifaction() {
             userNotification.checkCount()
             Util.setTodayNotifaction(flag: true)
         }
