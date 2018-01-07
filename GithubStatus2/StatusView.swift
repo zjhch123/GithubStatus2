@@ -32,6 +32,8 @@ class StatusView: NSView {
         startupAppWhenLogin(startup: Util.getDefaultStartup())
         userNotification = UserNotification()
         let cycyleTimer = Timer(timeInterval: 10, target: self, selector: #selector(self.timer), userInfo: nil, repeats: true)
+        
+        
         RunLoop.main.add(cycyleTimer, forMode:RunLoopMode.commonModes)
     
         Util.setTodayNotifaction(flag: false)
@@ -47,6 +49,7 @@ class StatusView: NSView {
             Util.setTodayNotifaction(flag: true)
         }
     }
+
     
     @IBAction func preferencesClicked(_ sender: AnyObject) {
         preferencesWindow.showWindow(nil)

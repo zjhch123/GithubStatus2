@@ -50,8 +50,7 @@ class GithubRequest {
             "Cookie": "tz=Asia/Shanghai"
         ]
         do {
-            let opt = try HTTP.GET("https://github.com/" + username, headers: headers)
-            opt.start { response in
+            try HTTP.GET("https://github.com/" + username, headers: headers) { response in
                 if let err = response.error {
                     print("error: \(err.localizedDescription)")
                     return
