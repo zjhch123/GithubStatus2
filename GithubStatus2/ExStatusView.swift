@@ -73,4 +73,10 @@ extension StatusView: GithubRequestDelegate, PreferencesWindowDelegate {
         }
     }
     
+    func gotoHomePage() {
+        let user = Util.getDefaultUser();
+        if let url = URL(string: "https://www.github.com/" + user), NSWorkspace.shared().open(url) {
+            // TODO
+        }
+    }   
 }

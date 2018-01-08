@@ -15,7 +15,7 @@ class StatusView: NSView {
 
     @IBOutlet weak var usernameTextField: NSTextField!
     @IBOutlet weak var countTextField: NSTextField!
-    @IBOutlet weak var logoImageView: NSImageView!
+
     @IBOutlet weak var statusColor: NSTextField!
     
     let statusItem = NSStatusBar.system().statusItem(withLength: -1)
@@ -50,6 +50,10 @@ class StatusView: NSView {
         }
     }
 
+
+    @IBAction func logoClicked(_ sender: NSButton) {
+        gotoHomePage()
+    }
     
     @IBAction func preferencesClicked(_ sender: AnyObject) {
         preferencesWindow.showWindow(nil)

@@ -31,8 +31,6 @@ class GithubRequest {
         let pattern = "fill=\"(#\\w{6})\" data-count=\"(\\d{1,})\" data-date=\"\(stringDate)\""
         let color = pattern.r?.findFirst(in: html)?.group(at: 1)
         let digit = pattern.r?.findFirst(in: html)?.group(at: 2)
-        print(digit)
-        print(color)
         return (digit, color)
     }
     
@@ -49,17 +47,13 @@ class GithubRequest {
             "Accept-Encoding": "gzip, deflate, sdch, br",
             "Cookie": "tz=Asia/Shanghai"
         ]
-        do {
-            try HTTP.GET("https://github.com/" + username, headers: headers) { response in
-                if let err = response.error {
-                    print("error: \(err.localizedDescription)")
-                    return
-                }
-                print("ok")
-                self.getCountFrom(html: response.description, username: username)
+        HTTP.GET("https://github.com/" + username, headers: headers) { response in
+            if let err = response.error {
+                print("error: \(err.localizedDescription)")
+                return
             }
-        } catch let error {
-            print("an error occur: \(error.localizedDescription)")
+            print("ok")
+            self.getCountFrom(html: response.description, username: username)
         }
     }
     
