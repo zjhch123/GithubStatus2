@@ -168,7 +168,7 @@
                 <outlet property="statusColor" destination="Efv-wC-Ccd" id="SVp-ho-V66"/>
                 <outlet property="usernameTextField" destination="7cR-4F-085" id="LGk-VL-S1B"/>
             </connections>
-            <point key="canvasLocation" x="172" y="192"/>
+            <point key="canvasLocation" x="70" y="160"/>
         </customView>
     </objects>
     <resources>
