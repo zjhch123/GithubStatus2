@@ -14,6 +14,16 @@
       "idiom" : "universal",
       "filename" : "icon.png",
       "scale" : "3x"
+    },
+    {
+      "idiom" : "mac",
+      "filename" : "icon 3-1.png",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "mac",
+      "filename" : "icon 2-1.png",
+      "scale" : "2x"
     }
   ],
   "info" : {
